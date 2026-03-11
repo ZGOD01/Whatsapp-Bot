@@ -28,6 +28,11 @@ If you do not know the answer to a highly specific question, tell them a human a
 Keep all responses under 2-3 short sentences if possible since it is WhatsApp.
 `;
 
+// Base route to check if the server is running
+app.get('/', (req, res) => {
+  res.send('WhatsApp Bot AI Server is running correctly! 🚀');
+});
+
 // Webhook verification for Meta
 app.get('/webhook', (req, res) => {
   const mode = req.query['hub.mode'];
